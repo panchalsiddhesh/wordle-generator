@@ -1,0 +1,51 @@
+@use "../abstracts/variables" as *;
+
+:root {
+  --color-background: #{$color-background};
+  --color-foreground: #{$color-foreground};
+  --color-card-background: #{$color-card-background};
+  --color-card-border: #{$color-card-border};
+  --color-gray-1: #{$color-gray-1};
+  --color-gray-2: #{$color-gray-2};
+  --color-gray: #{$color-gray};
+  --color-gray-disabled: #{$color-gray-disabled};
+  --color-primary: #{$color-primary};
+  --color-white: #{$color-white};
+  --color-black: #{$color-black};
+  --color-correct: #{$color-correct};
+  --color-almost: #{$color-almost};
+
+  /* Border Radius */
+  --border-radius-small: #{$border-radius-small};
+  --border-radius-medium: #{$border-radius-medium};
+  --border-radius-large: #{$border-radius-large};
+
+  /* Typography */
+  --font-heading: #{$font-heading};
+  --font-description: #{$font-description};
+}
+
+.dark-theme {
+  --color-background: #{$color-background-dark};
+  --color-foreground: #{$color-foreground-dark};
+  --color-card-background: #{$color-card-background-dark};
+  --color-card-border: #{$color-card-border-dark};
+  --color-gray-1: #{$color-gray-1-dark};
+  --color-gray-2: #{$color-gray-2-dark};
+  --color-gray: #{$color-gray-dark};
+  --color-gray-disabled: #{$color-gray-disabled};
+  --color-primary: #{$color-primary};
+  --color-white: #{$color-white};
+  --color-black: #{$color-black};
+  --color-correct: #{$color-correct};
+  --color-almost: #{$color-almost};
+
+  /* Border Radius */
+  --border-radius-small: #{$border-radius-small};
+  --border-radius-medium: #{$border-radius-medium};
+  --border-radius-large: #{$border-radius-large};
+
+  /* Typography */
+  --font-heading: #{$font-heading};
+  --font-description: #{$font-description};
+}

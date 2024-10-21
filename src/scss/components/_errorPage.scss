@@ -1,0 +1,41 @@
+@use "../abstracts/mixins" as *;
+
+.error-page {
+  font-size: 24px;
+  margin: 30px;
+  @include flex-center();
+  flex-direction: column;
+  height: 80vh;
+}
+
+.error-page__title {
+  text-align: center;
+}
+
+.error-page__button {
+  width: fit-content;
+  margin-top: 24px;
+  margin-inline: auto;
+  padding: 10px 30px;
+  border-radius: var(--border-radius-small);
+  cursor: pointer;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+
+  &:hover:not(:disabled) {
+    transition: all 0.25s ease;
+    filter: brightness(1.1);
+  }
+
+  &:disabled {
+    transition: all 0.25s ease;
+    opacity: 0.6;
+    cursor: no-drop;
+  }
+}

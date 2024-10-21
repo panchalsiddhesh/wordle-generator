@@ -1,0 +1,132 @@
+@use "../abstracts/mixins" as *;
+
+.game {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+  flex-direction: column;
+}
+
+.board {
+  @include flex-center();
+  flex-direction: column;
+  width: 100vw;
+  @include respond-to(small) {
+    width: fit-content;
+  }
+}
+
+.row {
+  margin-inline: 5px;
+  width: 100%;
+  @include flex-center();
+  @include respond-to(small) {
+    width: fit-content;
+  }
+}
+
+.letter {
+  border: 2px solid var(--color-foreground);
+  margin: 5px;
+  flex: 1;
+  aspect-ratio: 1;
+
+  @include flex-center();
+
+  max-width: 42px;
+  max-height: 42px;
+  font-weight: bolder;
+  color: var(--color-foreground);
+  font-family: var(--font-description);
+
+  @include respond-to(small) {
+    font-size: 24px;
+    width: 52px;
+    height: 52px;
+    max-width: 52px;
+    max-height: 52px;
+  }
+
+  &.scale {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-out;
+  }
+}
+
+.letter:empty {
+  border: 2px solid var(--color-gray-1);
+}
+
+#correct {
+  background-color: var(--color-correct);
+  border: none;
+}
+
+#almost {
+  background-color: var(--color-almost);
+  border: none;
+}
+
+#error {
+  background-color: var(--color-gray-2);
+  border: none;
+}
+
+.keyboard {
+  width: 100%;
+  height: 300px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  @include respond-to(small) {
+    width: 700px;
+  }
+}
+
+.line1,
+.line2,
+.line3 {
+  @include flex-center();
+  margin: 5px;
+}
+
+.key {
+  width: 25px;
+  height: 40px;
+  margin: 5px;
+  border-radius: 4px;
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  background-color: var(--color-gray-2);
+  color: var(--color-white);
+  font-family: var(--font-description);
+  cursor: pointer;
+  @include respond-to(small) {
+    font-size: 20px;
+    width: 50px;
+    height: 70px;
+  }
+}
+
+#big {
+  width: 50px;
+  font-size: 12px;
+  @include respond-to(small) {
+    width: 100px;
+    font-size: large;
+  }
+}
+
+.key-correct {
+  background-color: var(--color-correct);
+}
+
+.key-almost {
+  background-color: var(--color-almost);
+}
+
+.key-disabled {
+  background-color: var(--color-gray-disabled);
+}

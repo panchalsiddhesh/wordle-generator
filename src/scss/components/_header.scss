@@ -1,0 +1,56 @@
+@use "../abstracts/mixins" as *;
+
+.header {
+  height: 50px;
+  position: relative;
+  border-bottom: 1px solid var(--color-gray-1);
+  @include flex-center();
+  justify-content: flex-end;
+  padding: 8px;
+  @include respond-to(small) {
+    height: 70px;
+    padding: 30px;
+  }
+}
+
+.header-container {
+  max-width: 1120px;
+  margin-inline: auto;
+  width: 100%;
+  @include flex-center();
+  justify-content: flex-end;
+  @include respond-to(small) {
+    width: 90%;
+  }
+}
+
+.header-title {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  @include respond-to(small) {
+    font-size: 32px;
+  }
+}
+
+.header-theme-toggle {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  @include respond-to(small) {
+    font-size: 28px;
+  }
+  & > svg:hover {
+    transform: scale(1.1);
+    transform: rotate(5deg);
+    transition: transform 0.3s ease-out;
+  }
+}
