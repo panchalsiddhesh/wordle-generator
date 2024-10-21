@@ -22,7 +22,7 @@ const Header = () => {
         <div
           className="header-title"
           onClick={() => {
-            navigate("/");
+            navigate("/wordle-generator/");
           }}
         >
           Wordle

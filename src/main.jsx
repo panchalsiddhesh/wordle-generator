@@ -20,7 +20,7 @@ const WordleMainGame = lazy(() => import("./components/pages/WordleMainGame"));
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route
-      path="/wordle-generator"
+      path="/wordle-generator/"
       element={<App />}
       errorElement={<ErrorPage />}
     >
@@ -31,12 +31,12 @@ const router = createBrowserRouter(
         errorElement={<ErrorPage />}
       />
       <Route
-        path="/game/:id"
+        path="game/:id"
         element={<WordleMainGame />}
         errorElement={<ErrorPage />}
       />
       <Route
-        path="/error"
+        path="error"
         element={<ErrorPage />}
         errorElement={<ErrorPage />}
       />

@@ -11,7 +11,7 @@ const Error = () => {
       <button
         className="error-page__button"
         onClick={() => {
-          navigate("/");
+          navigate("/wordle-generator/");
         }}
       >
         Go to Home

@@ -15,7 +15,7 @@ const WordleGeneratorSettings = () => {
 
       if (isValidWord) {
         const encodedWord = btoa(word);
-        const link = `${window.location.origin}/game/${encodedWord}-${guesses}`;
+        const link = `${window.location.origin}/wordle-generator/game/${encodedWord}-${guesses}`;
 
         navigator.clipboard.writeText(link);
         setShowCopyLinkToast(true);

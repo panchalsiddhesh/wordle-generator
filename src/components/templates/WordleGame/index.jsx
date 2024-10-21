@@ -132,7 +132,7 @@ const WordleGame = () => {
           if (isDecodedWordValid) {
             setCorrectWord(decodedWord);
           } else {
-            navigate("/error");
+            navigate("/wordle-generator/error");
             throw new Error("Invalid decoded word. Word not in word bank");
           }
         } catch (error) {
