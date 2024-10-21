@@ -1,0 +1,1 @@
+import{u as o,j as e}from"./index-BSyIoV6X.js";const s=()=>{const r=o();return e.jsxs("div",{className:"error-page",children:[e.jsx("p",{className:"error-page__title",children:"The page you are looking for doesnt exist."}),e.jsx("button",{className:"error-page__button",onClick:()=>{r("/wordle-generator/")},children:"Go to Home"})]})};export{s as default};
