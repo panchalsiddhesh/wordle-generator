@@ -1,1 +1,0 @@
-import{u as o,j as e}from"./index-Cp2Yroim.js";const a=()=>{const r=o();return e.jsxs("div",{className:"error-page",children:[e.jsx("p",{className:"error-page__title",children:"The page you are looking for doesnt exist."}),e.jsx("button",{className:"error-page__button",onClick:()=>{r("/")},children:"Go to Home"})]})};export{a as default};
