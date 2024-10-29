@@ -17,18 +17,23 @@ const WordleGeneratorSettings = () => {
         const encodedWord = btoa(word);
         const link = `${window.location.origin}/wordle-generator/game/${encodedWord}-${guesses}`;
 
-        navigator.clipboard.writeText(link);
+      try {
+        await navigator.clipboard.writeText(link);
         setShowCopyLinkToast(true);
-
+  
         // Clear any existing timeout
         if (timeoutRef.current) {
           clearTimeout(timeoutRef.current);
         }
-
+  
         // Set a new timeout and store its ID
         timeoutRef.current = setTimeout(() => {
           setShowCopyLinkToast(false);
         }, 2000);
+      } catch (error) {
+        console.error("Failed to copy text", error);
+      }
+
       }
     },
     [word, guesses]
